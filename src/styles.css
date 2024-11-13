@@ -1,0 +1,64 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.nav {
+    display: grid;
+    grid-template-columns: 303px 4.26fr 1fr auto;
+    padding: 33px 64px;
+    align-items: center;
+}
+
+.nav__list,
+.nav__actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.nav__list {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.64px;
+}
+.nav__phone {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.nav__phone-number {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2020;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+.nav__phone-text {
+    font-size: 14px;
+    opacity: 30%;
+    line-height: 16px;
+}
+.action {
+    width: 20px;
+    height: 20px;
+}
+.action-find {
+    background: url('img/svg/find.svg');
+}
+.action-profile {
+    background: url('img/svg/profile.svg');
+}
+.action-heart {
+    background: url('img/svg/heart.svg');
+}
+.action-cabinet {
+    min-width: 24px;
+    min-height: 24px;
+    background-color: #7bb899;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-style: medium;
+}
