@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Webpack Project</title>
+    </head>
+    <body>
+        <div class="filter"></div>
+        <nav class="nav">
+            <div class="nav__logo">
+                <img class="nav__logo-img" src="" alt="logo" />
+            </div>
+            <ul class="nav__list">
+                <li><a>Продукты</a></li>
+                <li><a>Цвета</a></li>
+                <li><a>Вдохновение</a></li>
+                <li><a>Советы</a></li>
+                <li><a>Найти магазин</a></li>
+            </ul>
+            <div class="nav__phone">
+                <a class="nav__phone-number" href="tel:74952217769"
+                    >+7 (495) 221-77-69</a
+                >
+                <a class="nav__phone-text">Заказать звонок</a>
+            </div>
+            <div class="nav__actions">
+                <div class="action action-find"></div>
+                <div class="action action-profile"></div>
+                <div class="action action-heart"></div>
+                <div class="action action-cabinet">4</div>
+            </div>
+        </nav>
+        <main>
+            <section id="slider-section">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-text">
+                                <h1>Краски</h1>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-text">
+                                <h1>Краски</h1>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-text">
+                                <h1>Краски</h1>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-breadcrumb">
+                    <ul class="swiper-breadcrumb-list">
+                        <li class="breadcrumb-element">Главная</li>
+                        <li class="breadcrumb-element">Продукты</li>
+                        <li class="breadcrumb-element">Краски</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="catalog-section">
+                <aside class="section-aside"></aside>
+
+                <div class="section-products">
+                    <div class="products-top">
+                        <div class="products-top-count">
+                            <span id="prod-count"></span> Товаров
+                        </div>
+                        <div id="select" class="products-top-filter">
+                            <div class="select">
+                                <div class="select-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products"></div>
+                </div>
+            </section>
+            <footer class="footer"></footer>
+        </main>
+        <template id="select-template">
+            <div class="select-element"></div>
+        </template>
+        <template id="products">
+            <div class="product-container">
+                <img class="product-image" />
+                <div class="product-info">
+                    <p class="product-name"></p>
+                    <div class="product-price">
+                        <p class="price"></p>
+                        <div class="button cart-button">
+                            <span class="plus"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template id="toggle-template">
+            <div class="aside-action">
+                <label class="toggle-switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                    <span class="label-text"></span>
+                </label>
+            </div>
+        </template>
+    </body>
+    <script src="bundle.js"></script>
+</html>
