@@ -1,5 +1,5 @@
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
 .nav {
@@ -39,17 +39,17 @@ body {
     line-height: 16px;
 }
 .action {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
 .action-find {
-    background: url("img/svg/find.svg");
+    background: url('img/svg/find.svg') no-repeat;
 }
 .action-profile {
-    background: url("img/svg/profile.svg");
+    background: url('img/svg/profile.svg') no-repeat;
 }
 .action-heart {
-    background: url("img/svg/heart.svg");
+    background: url('img/svg/heart.svg') no-repeat;
 }
 .action-cabinet {
     min-width: 24px;
@@ -62,123 +62,6 @@ body {
 
     font-size: 12px;
     font-style: medium;
-}
-
-/* Стили для контейнера слайдера */
-#slider-section {
-    width: 100vw;
-    position: relative;
-}
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.swiper-slide {
-    position: relative;
-    min-height: 560px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.swiper-slide-text {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.swiper-slide h1 {
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 72px;
-
-    margin: 0;
-}
-
-.swiper-slide p {
-    max-width: 472px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.32px;
-}
-
-.swiper-slide-image {
-    position: relative;
-}
-
-.swiper-breadcrumb {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 5px 10px;
-    border-radius: 5px;
-
-    color: white;
-    z-index: 1;
-}
-
-.swiper-breadcrumb-list {
-    display: flex;
-    text-align: center;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-
-    text-transform: uppercase;
-}
-
-.breadcrumb-element {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.3);
-    display: flex;
-    align-content: center;
-    line-height: 10px;
-}
-
-.breadcrumb-element::after {
-    content: url(./img/svg/dot.svg);
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: -2.5px;
-}
-
-.breadcrumb-element:last-child::after {
-    content: "";
-}
-
-.swiper-pagination {
-    position: absolute;
-}
-
-.swiper-slide-text {
-    position: absolute;
-}
-
-.swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    margin: 0 5px;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-.swiper-pagination-bullet-active {
-    background: rgba(255, 255, 255, 1);
-    opacity: 1;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #fff;
-    padding: 0 78px;
 }
 
 #catalog-section {
@@ -198,10 +81,76 @@ body {
 .aside-action {
     min-width: 165px;
     display: flex;
+    align-items: center;
 }
 .aside-action label {
     font-size: 12px;
 
     text-transform: uppercase;
     letter-spacing: 0.6px;
+}
+
+.products-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background: black;
+    height: 312px;
+}
+
+.products-top-count {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.toggle-switch input[type='checkbox'] {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    width: 36px;
+    height: 22px;
+    background-color: #ccc;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: #1f2020;
+}
+
+.toggle-switch input[type='checkbox']:checked + .slider {
+    background-color: #7bb899;
+}
+
+.toggle-switch input[type='checkbox']:checked + .slider::before {
+    transform: translateX(14px);
+}
+
+.toggle-switch span {
+    user-select: none;
 }

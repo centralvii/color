@@ -1,42 +1,30 @@
-import "./fonts/inter.css"
+import './fonts/inter.css';
+import './normalize.css';
+import './styles.css';
 
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "./normalize.css"
+import './components/ProductsComponent/productsComponent';
+import initializeSwiper from './components/SwiperComponent/swiperComponent';
+import initializeSelect from './components/SelectComponent/selectComponent';
+import initializeLogo from './components/LogoComponent/logoComponent';
+import initializeToggleSwitches from './components/SwitchComponent/switchComponent';
 
-import "./styles.css"
+import { loadProducts } from './components/ProductsComponent/productsComponent';
 
-import Swiper from "swiper"
-import { Navigation, Pagination } from "swiper/modules"
+const toggleData = [
+    { label: 'Новинки', checked: true },
+    { label: 'Есть в наличии', checked: false },
+    { label: 'Контрактные', checked: false },
+    { label: 'Эксклюзивные', checked: false },
+    { label: 'Распродажа', checked: false },
+];
 
-import logoImage from "./img/svg/logo.svg"
+initializeToggleSwitches(toggleData);
 
-const swiperSlide = document.querySelectorAll(".swiper-slide")
-const logo = (document.querySelector(".nav__logo-img").src = logoImage)
+initializeLogo();
+initializeSwiper();
+initializeSelect((selectedFilter) => {
+    // Загружаем продукты с выбранным фильтром
+    loadProducts(selectedFilter);
+});
 
-const swiper = new Swiper(".swiper-container", {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-})
-
-const swiperImages = [
-    require("./img/slider-img-first.png"),
-    require("./img/slider-img-first.png"),
-    require("./img/slider-img-first.png"),
-]
-
-swiperSlide.forEach((item) => {
-    swiperImages.forEach((image) => {
-        item.style.backgroundImage = `url(${image})`
-    })
-})
+loadProducts();
