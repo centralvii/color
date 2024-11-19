@@ -49,3 +49,30 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+@media (width < 1920px) {
+    .product-container {
+        max-width: 226px;
+        max-height: 300px;
+        gap: 15px;
+        justify-content: center;
+    }
+    .nav__actions {
+        justify-content: right;
+    }
+}
+
+@media (width < 1075px) {
+    .section-products {
+        padding: 72px 24px;
+    }
+    .product-container {
+        max-width: 206px;
+        max-height: 270px;
+        gap: 15px;
+        justify-content: center;
+    }
+    .products {
+        justify-content: center;
+    }
+}
